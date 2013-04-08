@@ -5,7 +5,7 @@
 源文件采用my-huge.cnf参考
 
 方案A
---------------------
+---------
 
 32 bit system
 2GB of memory
@@ -41,7 +41,7 @@ skip-innodb
 
 
 方案B
---------------------
+---------
 
 32 bit system
 4GB of memory
@@ -77,7 +77,7 @@ skip-innodb
 
 
 方案C
---------------------
+---------
 
 64 bit system
 8GB+ of memory
