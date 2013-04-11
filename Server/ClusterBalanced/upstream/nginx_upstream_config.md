@@ -43,7 +43,8 @@ fair
 
 使用方法
 --------------
-直接在server里面添加对应的代码：<br/>
+直接在server里面添加对应的代码：
+
 	server{
 		listen 80;
 		server_name .abc.com;
