@@ -55,5 +55,19 @@ fair
 		} 
 	}
 
+
+附2个常见问题
+----------------
+1)分布式部署的ip获取问题。
+
+	proxy_set_header Host $host;
+	proxy_set_header X-Real-IP $remote_addr;
+	proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+	#nginx里面把ip扔到x_forwarded_for里面。
  
+2）session共享问题
+
+	 session.save_handler = "memcache"  
+	 session.save_path = "tcp://192.168.1.104:11211"  
 	 
+	 #phpini里面也的相应修改。注意是修改不是增加。
