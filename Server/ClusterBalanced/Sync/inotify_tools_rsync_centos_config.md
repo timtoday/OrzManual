@@ -83,22 +83,22 @@ https://github.com/rvoicilas/inotify-tools/wiki#wiki-getting
 相关参数：
 inotify 可以监视的文件系统事件包括：
     
-　　IN_ACCESS，即文件被访问
-　　IN_MODIFY，文件被 write
-　　IN_ATTRIB，文件属性被修改，如 chmod、chown、touch 等
-　　IN_CLOSE_WRITE，可写文件被 close
-　　IN_CLOSE_NOWRITE，不可写文件被 close
-　　IN_OPEN，文件被 open
-　　IN_MOVED_FROM，文件被移走,如 mv
-　　IN_MOVED_TO，文件被移来，如 mv、cp
-　　IN_CREATE，创建新文件
-　　IN_DELETE，文件被删除，如 rm
-　　IN_DELETE_SELF，自删除，即一个可执行文件在执行时删除自己
-　　IN_MOVE_SELF，自移动，即一个可执行文件在执行时移动自己
-　　IN_UNMOUNT，宿主文件系统被 umount
-　　IN_CLOSE，文件被关闭，等同于(IN_CLOSE_WRITE | IN_CLOSE_NOWRITE)
-　　IN_MOVE，文件被移动，等同于(IN_MOVED_FROM | IN_MOVED_TO)
-　　注：上面所说的文件也包括目录。
+　　IN_ACCESS，即文件被访问<br/>
+　　IN_MODIFY，文件被 write<br/>
+　　IN_ATTRIB，文件属性被修改，如 chmod、chown、touch 等<br/>
+　　IN_CLOSE_WRITE，可写文件被 close<br/>
+　　IN_CLOSE_NOWRITE，不可写文件被 close<br/>
+　　IN_OPEN，文件被 open<br/>
+　　IN_MOVED_FROM，文件被移走,如 mv<br/>
+　　IN_MOVED_TO，文件被移来，如 mv、cp<br/>
+　　IN_CREATE，创建新文件<br/>
+　　IN_DELETE，文件被删除，如 rm<br/>
+　　IN_DELETE_SELF，自删除，即一个可执行文件在执行时删除自己<br/>
+　　IN_MOVE_SELF，自移动，即一个可执行文件在执行时移动自己<br/>
+　　IN_UNMOUNT，宿主文件系统被 umount<br/>
+　　IN_CLOSE，文件被关闭，等同于(IN_CLOSE_WRITE | IN_CLOSE_NOWRITE)<br/>
+　　IN_MOVE，文件被移动，等同于(IN_MOVED_FROM | IN_MOVED_TO)<br/>
+　　注：上面所说的文件也包括目录。<br/>
 
     inotifywait 命令的常用参数包括：
     -m, --monitor      保持一直监听
