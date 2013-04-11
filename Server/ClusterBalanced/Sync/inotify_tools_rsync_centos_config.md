@@ -123,13 +123,40 @@ inotify 可以监视的文件系统事件包括：
 	
 要排除同步某个目录时，为rsync添加--exculde=PATTERN参数，注意，路径是相对路径，具体查看man rsync。
 要排除某个目录的事件监听的处理时，为inotifywait添加--exclude或--excludei参数，具体查看man inotifywait。
- 
+增加排除功能的改进版：
+
+	#!/bin/sh
+	
+	# get the current path
+	CURPATH=`pwd`
+	src=/opt/wwwroot/
+	des1=root@192.168.1.102:/home/web/wwwroot
+	#监听忽略
+	exclude='(log|Runtime|Conf)'
+	
+	/usr/local/inotify-tools/bin/inotifywait -mrq --exclude ${exclude} --timefmt '%d/%m/%y %H:%M' --format '%T %w %f' \
+	-e modify,delete,create,attrib,move  ${src} | while read date time dir file; do
+	
+	       FILECHANGE=${dir}${file}
+	       FILECHANGEREL=`echo "$FILECHANGE" | sed 's_'$CURPATH'/__'`
+	       /usr/bin/rsync -vzrtopg --delete --progress --exclude-from=/root/exclude.list  ${src} ${des1}  &&
+	       # echo "[${date}][${time}]${FILECHANGE} was rsynced" >> /tmp/rsync.log 2>&1
+	done
+	
+	增加rsync的忽略文件/root/exclude.list
+	[root@node1 ~]# cat exclude.list 
+	Runtime*
+	*.log
+	Conf*
+	#一行一个，支持模糊*匹配
+	
+
 	#调整权限
 	chmod +x inotify_rsync.sh
 	#执行
 	 ./inotify_rsync.sh &
 	#自启动
-	cat "/root/inotify_rsync.sh &" >> /etc/rc.local
+	echo "/root/inotify_rsync.sh " >> /etc/rc.local
 
 配置完成，到/home/rsync/test创建修改文件，再去子节点看看效果
 
