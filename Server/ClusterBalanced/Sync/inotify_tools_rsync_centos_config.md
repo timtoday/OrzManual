@@ -60,6 +60,7 @@ https://github.com/rvoicilas/inotify-tools/wiki#wiki-getting
 
 下载安装
 	wget -c http://github.com/downloads/rvoicilas/inotify-tools/inotify-tools-3.14.tar.gz
+	
 	tar zxvf inotify-tools-3.14.tar.gz
 	 ./configure --prefix=/usr/local/intify-tools
 	 make && make install
