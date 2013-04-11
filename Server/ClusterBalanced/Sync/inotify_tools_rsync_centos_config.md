@@ -40,6 +40,7 @@ centos 直接yum安装
 		
 	到其他主节点配置ssh自动登陆
 	[rsync@mynode2 .ssh]$ mv id_dsa.pub authorized_keys
+	#SElinux关闭过的同学跳过以下两行
 	[rsync@mynode2 .ssh]$ restorecon -R -v ~/.ssh
 	[rsync@mynode2 .ssh]$ setenforce 0
 	
