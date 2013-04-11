@@ -1,5 +1,7 @@
 centos 集群文件自动同步配置
 ================================
+自动同步可以使用很多方法，以下介绍inotify+rsync的配置(NFS的同学，文件量大于100G的直接跳过)
+
 scp
 -----
 yum install openssh-clients
