@@ -1,3 +1,5 @@
+centos 集群文件自动同步配置
+================================
 scp
 -----
 yum install openssh-clients
