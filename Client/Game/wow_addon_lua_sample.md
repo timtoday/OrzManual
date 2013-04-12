@@ -12,7 +12,7 @@ http://www.wowwiki.com/Lua
 sample
 -----------
 之前写的一个自动作战插件，可能不是完整版，语法分析后面整理:<br/>
-https://raw.github.com/timtoday/makeoptimizer/master/Client/Game/resource/wow_addon_sample_Wang.rar
+https://raw.github.com/timtoday/Orz Manual/master/Client/Game/resource/wow_addon_sample_Wang.rar
  
 
  

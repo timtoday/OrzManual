@@ -1,4 +1,4 @@
-makeoptimizer Server
+Orz Manual Server
 ==========================
 
 Server part

@@ -1,7 +1,7 @@
-makeoptimizer
+Orz Manual
 =============
 
-Make your  system optimizer
+Your manuals,ORz!!!
 
  
 

@@ -1,7 +1,7 @@
 FreeBsd  操作系统
 ===================================
 
-![github](https://raw.github.com/timtoday/makeoptimizer/master/Server/System/linux/Freebsd/resource/img/freebsd_logo.png "github")<br/>
+![github](https://raw.github.com/timtoday/Orz Manual/master/Server/System/linux/Freebsd/resource/img/freebsd_logo.png "github")<br/>
 
 严格来说[FreeBSD](http://www.freebsd.org)不是linux系统，属于原始的uninx分支版本。之前项目中用过FreeBSD 5.4很长时间，由于之前的版本对JAVA的支不好，所以都转向到Linux阵营。<br />
 
