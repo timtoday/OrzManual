@@ -18,5 +18,5 @@ linux 基于shell 的守护进程
 
 用crontab每五分钟检查一次
 --------------------------
-crontab -e
-*/5 * * * * root /root/xxx_deamon.sh
+	crontab -e
+	*/5 * * * * root /root/xxx_deamon.sh
