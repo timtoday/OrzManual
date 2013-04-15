@@ -34,9 +34,11 @@ crontab实例
 ===================
 
   #每天早晨三点二十分执行
+  
   20 3 * * * /bin/sh /root/XXX_deamon.sh
 
   #在每周一的下午3：00执行
+  
   00 15 * * 1 /bin/sh /root/XXX_deamon.sh
 
 
