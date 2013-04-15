@@ -22,7 +22,7 @@ crontab实例
 ------------------------
   0 0 * * 0 /bin/sh /root/XXX_deamon.sh
 
-每周
+每月
 ------------------------
   0 0 1 * * /bin/sh /root/XXX_deamon.sh
 
