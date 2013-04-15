@@ -5,7 +5,7 @@ linux 基于shell 的守护进程
 自动恢复
  
 	#!/bin/sh
-	count='ps -ef |grep "mysqld"  | wc -l'
+	count=`ps -ef |grep "mysqld"  | wc -l`
 	if [ $count -lt 3 ] ;then
 		#echo "restart"
 		/etc/init.d/mysql restart
