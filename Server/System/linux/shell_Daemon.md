@@ -5,11 +5,10 @@ linux 基于shell 的守护进程
 自动恢复
  
 	#!/bin/sh
-	count=`ps -ef |grep "mysqld"  | wc -l`
-	if [ $count -lt 3 ] ;then
-		#echo "restart"
-		nohup /root/xxxx.sh >/dev/null 2>&1 &
-		########/etc/init.d/mysql restart
+	count=`ps -ef |grep "inotifywait"  | wc -l`
+	if [ $count -lt 2 ] ;then
+	    #echo "restart"
+	   nohup /bin/sh /root/xxx.sh >/dev/null 2>&1 &
 	fi
 加到crontab 里面
 
@@ -19,4 +18,5 @@ linux 基于shell 的守护进程
 用crontab每五分钟检查一次
 --------------------------
 	crontab -e
-	*/5 * * * * root /root/xxx_deamon.sh
+
+	*/5 * * * * /bin/sh /root/xxx_deamon.sh
