@@ -56,7 +56,7 @@ fair
 	}
 
 
-附2个常见问题
+附3个常见问题
 ----------------
 1)分布式部署的ip获取问题。
 
@@ -71,3 +71,17 @@ fair
 	 session.save_path = "tcp://192.168.1.104:11211"  
 	 
 	 #phpini里面也的相应修改。注意是修改不是增加。
+
+3)大文件上传问题
+	
+	#反向代理可能会导致大文件上传失败，可以修改nginx.conf
+	#server 里面添加
+	proxy_connect_timeout 300;
+	proxy_read_timeout 300;
+	proxy_send_timeout 300;
+	#http里面添加
+	proxy_buffers 8 16k;
+	proxy_buffer_size 32k;
+	#如果有fastcgi
+	fastcgi_buffers 8 16k;
+	fastcgi_buffer_size 32k;
