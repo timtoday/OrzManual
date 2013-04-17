@@ -63,7 +63,7 @@ https://github.com/rvoicilas/inotify-tools/wiki#wiki-getting
 	wget -c http://github.com/downloads/rvoicilas/inotify-tools/inotify-tools-3.14.tar.gz
 	
 	tar zxvf inotify-tools-3.14.tar.gz
-	 ./configure --prefix=/usr/local/intoify-tools
+	 ./configure --prefix=/usr/local/inotify-tools
 	 make && make install
 	 
 配置监控同步脚本
@@ -77,7 +77,7 @@ https://github.com/rvoicilas/inotify-tools/wiki#wiki-getting
 	src=/home/rsync/test/   
 	des1=rsync@192.168.6.198:/home/rsync/test
 	 
-	/usr/local/intify-tools/bin/inotifywait -mrq --timefmt '%d/%m/%y %H:%M' --format '%T %w %f' \
+	/usr/local/inotify-tools/bin/inotifywait -mrq --timefmt '%d/%m/%y %H:%M' --format '%T %w %f' \
 	-e modify,delete,create,attrib,move  ${src} | while read date time dir file; do
 
 		   FILECHANGE=${dir}${file} 
