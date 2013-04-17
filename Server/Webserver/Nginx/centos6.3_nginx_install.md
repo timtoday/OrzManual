@@ -173,5 +173,15 @@ NGINX
     #GZIP跟状态查看 
     make && make install
 
+status功能
+------------
+    #在server里面添加
+    location /status {
+     allow all;
+     stub_status on;
+     access_log  off;
+    }
+
+
 
   
