@@ -63,7 +63,7 @@ https://github.com/rvoicilas/inotify-tools/wiki#wiki-getting
 	wget -c http://github.com/downloads/rvoicilas/inotify-tools/inotify-tools-3.14.tar.gz
 	
 	tar zxvf inotify-tools-3.14.tar.gz
-	 ./configure --prefix=/usr/local/intify-tools
+	 ./configure --prefix=/usr/local/intoify-tools
 	 make && make install
 	 
 配置监控同步脚本
