@@ -13,6 +13,7 @@ centos 直接yum安装
 	yum install rsync -y
 
 配置rsync用户
+
 	useradd -m rsync
 	passwd rsync
 	
