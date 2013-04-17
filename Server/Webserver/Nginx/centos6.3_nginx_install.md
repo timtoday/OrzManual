@@ -30,7 +30,8 @@ NGINX
 ---------
     wget -c http://nginx.org/download/nginx-1.2.8.tar.gz
     tar zxvf nginx-1.2.8.tar.gz
-#相关参数可configure  --help  看看
+    
+    #相关参数可configure  --help  看看
 
     --help                             print this message
   
