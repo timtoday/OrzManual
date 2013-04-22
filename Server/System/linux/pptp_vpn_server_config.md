@@ -47,3 +47,15 @@ Centos6 下基于PPTP的VPN服务器搭建
     mknod /dev/ppp c 108 0
     service pptpd start
     
+相关问题
+------------------
+1）service pptpd start 成功了链接不上？
+    IPtables问题,service iptables stop 后尝试。
+2）windows链接后本地上网变慢了？
+    网络链接-〉属性-〉网络-〉TCP/IPV4 ->高级-〉IP设置-〉在远程网络上使用默认网关（不选）
+    
+    
+
+
+
+
