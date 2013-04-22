@@ -34,3 +34,16 @@ Centos6 下基于PPTP的VPN服务器搭建
     #服务启动
     service pptpd start
 
+账户配置
+------------
+    #账户密码配置文件在/etc/ppp/chap-secrets
+    #格式如下
+    username pptpd password *
+    #用户名 pptpd 密码 *
+    
+服务修复
+--------------
+
+    mknod /dev/ppp c 108 0
+    service pptpd start
+    
