@@ -1,6 +1,19 @@
 检测网络，并获取当前上网卡的MAC地址
 ==================================
+头文件
 
+	#pragma once
+
+	class pc_info
+	{
+	public:
+		pc_info(void);
+		CString get_mac(void);
+	public:
+		~pc_info(void);
+	};
+
+CPP文件
 	#include "StdAfx.h"
 	#include "pc_info.h"
 	#include <WinSock2.h>
