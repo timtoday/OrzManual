@@ -22,7 +22,7 @@ Master配置
 	log-bin			 = mysql-bin	#开启日志
 	binlog-do-db	 = dbname       #这里写要同步的库名字
 	binlog-do-db	 = xxx       	#如果要同步多个库，请重复写这一行	
-    binlog-ignore-db = mysql,test	#这里写忽略同步的库名字
+    	binlog-ignore-db = mysql,test	#这里写忽略同步的库名字
 	
 	#修改完成后重启一下mysql服务器
 	#service mysqld restart
@@ -40,14 +40,14 @@ Master配置
 Slave配置
 -------------------
 	#修改my.cnf
-	server-id				= 2
+	server-id			= 2
 	master-host    			= 192.168.1.101
 	master-user     		= slave_user
 	master-password 		= 123456
 	master-port     		= 3306
-	master-connect-retry	= 60
+	master-connect-retry		= 60
 	replicate-do-db			= dbname   			#要同步的数据库 
-	replicate-do-db	    	= xxx				#如果有多个库需要同步，请重复这一行 
+	replicate-do-db	    		= xxx				#如果有多个库需要同步，请重复这一行 
 	log-slave-updates
 	slave-skip-errors		= all 				#忽略错误
 	
@@ -67,10 +67,10 @@ Slave配置
 	#记录master服务器的状态
 	show master status;
 	
-	#File 				mysql-bin.000001	
-	#Position 			123	
-	#Binlog_Do_DB 		dbname
-	#Binlog_Ignore_DB  	mysql
+File	          | Position    | Binlog_Do_DB | Binlog_Ignore_DB
+:-----------------|------------:|-------------:|----------------:
+ mysql-bin.000001 | 123         | dbname       | mysql     
+
 	
 	#记录File,Position的2个值。
 	
@@ -89,8 +89,11 @@ Slave配置
 	#查看slave 状态
 	show slave status
 	#如果状态中“file,position”值均正确，并且
-	#Slave_SQL_Running	= YES
-	#Replicate_DO_DB	= YES
+ 
+Master_Log_File	  | Read_Master_Log_Pos | Slave_SQL_Running | Replicate_DO_DB
+:-----------------|--------------------:|------------------:|----------------:
+ mysql-bin.000001 | 123                 | YES       	    | YES     	
+	
 	#说明Master/Slave设定成功
 	
 	#再到Master服务器解除数据库锁定，完成所有配置
