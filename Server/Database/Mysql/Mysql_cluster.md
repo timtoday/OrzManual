@@ -10,6 +10,7 @@ Master/Slave 主从式
 
 Master/Slave方式配置较简单，只需要在mysql默认配置中加入简单设置即可，应用场景较多。
 Master负责写入、读取数据功能，Slave只有读取功能(这不算是读写分离)。
+详细配置方法：Mysql_cluster_master_slave.md
  
 
 
