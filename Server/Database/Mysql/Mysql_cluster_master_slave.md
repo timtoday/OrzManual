@@ -90,8 +90,8 @@ File	          | Position    | Binlog_Do_DB | Binlog_Ignore_DB
 	show slave status
 	#如果状态中“file,position”值均正确，并且
  
-Master_Log_File	  | Read_Master_Log_Pos | Slave_SQL_Running | Replicate_DO_DB
-:-----------------|--------------------:|------------------:|----------------:
+Master_Log_File	  | Read_Master_Log_Pos | Slave_SQL_Running | Slave_IO_Running
+:-----------------|--------------------:|------------------:|-----------------:
  mysql-bin.000001 | 123                 | YES       	    | YES     	
 	
 	#说明Master/Slave设定成功
