@@ -11,13 +11,13 @@ Mysql集群能解决系统中mysql数据量大、数据安全性、数据备份�
     <td><strong>教程</strong></td>
   </tr>
   <tr>
-    <td>Master/Slave 主从式</td>
+    <td>Master/Slave <br/>主从式</td>
     <td>Master/Slave方式配置较简单，只需要在mysql默认配置中加入简单设置即可，应用场景较多。<br />
     Master负责写入、读取数据功能，Slave只有读取功能(这不算是读写分离)。</td>
     <td><a href="Mysql_cluster_master_slave.md">Mysql_cluster_master_slave.md</a></td>
   </tr>
   <tr>
-    <td>Master/Master 主主式</td>
+    <td>Master/Master <br/>主主式</td>
     <td>Master/Master 是在Master/Slave 的基础上，相互Slave。<br />
     实现多点同时写入、查询功能。可以简单实现异地系统数据同步、双机热备等问题。<br /></td>
     <td>&nbsp;</td>
