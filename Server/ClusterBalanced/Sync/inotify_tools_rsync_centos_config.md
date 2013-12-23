@@ -49,6 +49,10 @@ centos 直接yum安装
 	[rsync@mynode2 .ssh]$ restorecon -R -v ~/.ssh
 	[rsync@mynode2 .ssh]$ setenforce 0
 	
+	到目标服务器还要修改下对应文件的权限，不然每次都会提示修改密码
+	chmod 700 ~/.ssh
+	chmod 600 ~/.ssh/authorized_keys  
+	
 inotify-tools
 --------------
 
