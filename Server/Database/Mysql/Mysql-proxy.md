@@ -37,3 +37,26 @@ mysql-proxy服务器端输出结果：
 
 
 说明轮询生效了！
+
+
+
+mysql-proxy 0.8X版本配置稍微有些修改？
+-------------------------------------
+
+启动方式：
+    /usr/local/mysql-proxy/bin/mysql-proxy  --defaults-file=/usr/local/mysql-proxy/mysql-proxy.cnf  
+        
+cnf配置文件：
+
+    [mysql-proxy]
+    admin-username=root
+    admin-password=123456
+    admin-lua-script=/usr/local/mysql-proxy/share/admin.lua
+    proxy-read-only-backend-addresses=192.168.1.131
+    proxy-backend-addresses=192.168.1.132
+    proxy-lua-script=/usr/local/mysql-proxy/share/rw-splitting.lua
+    log-file=/var/log/mysql-proxy.log
+    log-level=debug
+    daemon = true
+    keepalive=true
+        
