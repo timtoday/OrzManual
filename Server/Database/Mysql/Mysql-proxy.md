@@ -40,10 +40,11 @@ mysql-proxy服务器端输出结果：
 
 
 
-mysql-proxy 0.8X版本配置稍微有些修改？
--------------------------------------
+mysql-proxy 0.8X版本配置稍微有些修改，采用cnf文件作配置文件
+-----------------------------------------------------------
 
-启动方式：
+启动方式
+
     /usr/local/mysql-proxy/bin/mysql-proxy  --defaults-file=/usr/local/mysql-proxy/mysql-proxy.cnf  
         
 cnf配置文件：
